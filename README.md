@@ -14,4 +14,10 @@ Key steps include:
 - **Extraction:** Loading data from CSV, JSON, or databases.  
 - **Transformation:** Handling missing values, encoding categorical features, normalization, and feature selection.  
 - **Loading:** Storing the cleaned data in a database or CSV for future use.  
- A well-implemented data pipeline enhances efficiency, reduces manual effort, and enables data-driven decision-making. 
+ A well-implemented data pipeline enhances efficiency, reduces manual effort, and enables data-driven decision-making.
+
+
+   *Output*
+![Screenshot 2025-03-17 232341](https://github.com/user-attachments/assets/65481748-c3b6-4a9a-99ee-2f5157ecd34d)
+
+
