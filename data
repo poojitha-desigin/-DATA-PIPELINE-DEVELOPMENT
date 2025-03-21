@@ -1,0 +1,27 @@
+import pandas as pd
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+import zipfile
+import os
+from google.colab import files
+
+
+print("Upload your ZIP file containing the dataset:")
+uploaded = files.upload()
+
+
+zip_path = list(uploaded.keys())[0]
+extract_dir = "extracted_dataset"
+with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_dir)
+print("✅ Dataset extracted successfully!")
+print("Files:", os.listdir(extract_dir))
+
+
+extracted_files = os.listdir(extract_dir)
+csv_file = [f for f in extracted_files if f.endswith('.csv')][0]
+df = pd.read_csv(os.path.join(extract_dir, csv_file))
+print("\n✅ Data loaded successfully! Preview:")
+print(df.head())
+
+df.fillna(method='ffill', inplace=True)
+print("\n✅ Missing values handled.")
